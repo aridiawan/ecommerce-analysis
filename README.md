@@ -27,13 +27,13 @@ Berdasarkan problem statement di atas, tujuan analisa yang dilakukan adalah:
 
 > Project Stakeholders
 
-Tim pemasaran dan sales
+1. Tim pemasaran dan sales
 Bertanggung jawab dalam mengembangkan dan merencanakan usaha marketing serta mengimplementasikan kepada pelanggan secara tepat dalam upaya memaksimalkan pendapatan perusahaan.
 
-Tim keuangan
+2. Tim keuangan
 Bertanggung jawab dalam mengatur keuangan perusahaan yang diakibatkan oleh usaha marketing.
 
-Tim IT 
+3. Tim IT
 Bertanggung jawab dalam mengelola website perusahaan, mengembangkan aplikasi, memelihara perangkat teknologi, merencanakan serta mengelola segala aspek teknologi untuk mengembangkan bisnis semakin masif.
 
 > Analytics Approach
