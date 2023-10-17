@@ -1,5 +1,20 @@
 # E-Commerce RFM Analysis
 
+Team Members:
+* [**Nur Adhianti Heryanto**](https://github.com/nheryanto)
+* [**Ari Adhi Hermawan**](https://github.com/aridiawan)
+* [**Andi Muhammad Rinaldi Saputra**](https://github.com/andimrs)
+
+Table of Contents
+-------------
+* [Context](#context)
+* [Problem Statement](#problem-statement)
+* [Scope of Problem](#scope-of-problem)
+* [Goals](#goals)
+* [Project Stakeholders](#project-stakeholders)
+* [Analytics Approach](#analytics-approach)
+* [Evaluation](#evaluation)
+
 Context
 -------------
 Kemampuan perusahaan dalam menjalin dan menjaga hubungan baik dengan pelanggan merupakan kunci keberhasilan bisnis yang berkelanjutan. Hubungan yang baik membuat pelanggan tetap ingin bertransaksi, atau bahkan mereka akan memberikan rekomendasi produk atau layanan perusahaan kepada orang lain. Dalam konteks bisnis, strategi mempertahankan pelanggan agar terus membeli produk atau menggunakan layanan dari perusahaan disebut dengan retensi pelanggan. Hal ini bertujuan untuk meningkatkan profit perusahaan.
@@ -18,7 +33,6 @@ Problem Statement
 -------------
 1. Bagaimana kondisi retensi pelanggan Olist?
 2. Bagaimana cara Olist melakukan segmentasi sehingga dapat membagi pelanggan berdasarkan perilaku pembeliannya?
-3. Bagaimana cara Olist memonitor performa bisnis, retensi dan segmentasi pelanggan sehingga dapat mengambil tindakan lebih cepat dan tepat?
 
 Scope of Problem
 -------------
@@ -28,7 +42,6 @@ Goals
 -------------
 * Melakukan analisis untuk mengetahui kondisi retensi pelanggan Olist.
 * Melakukan segmentasi pelanggan dan memberikan rekomendasi aksi yang sesuai (khususnya terkait pemasaran) untuk masing-masing segmentasi dengan harapan dapat meningkatkan retensi pelanggan dan mengurangi biaya operasional yang tidak diperlukan.
-* Membuat dashboard visualisasi untuk memonitor performa bisnis, retensi dan segmentasi pelanggan.
 
 Project Stakeholders
 -------------
@@ -43,14 +56,11 @@ Bertanggung jawab dalam mengatur keuangan perusahaan yang diakibatkan oleh usaha
 Analytics Approach
 -------------
 1. Descriptive Analysis
-> - Retention Rate
-> - Cohort Analysis
+> - Retention Rate - Cohort Analysis
 
 2. Segmentation
 > - RFM Analysis
 > - Clustering - Unsupervised Machine Learning
-
-3. Tabelau - Dashboard
 
 Evaluation
 -------------
