@@ -6,12 +6,18 @@ Kemampuan perusahaan dalam menjalin dan menjaga hubungan baik dengan pelanggan m
 
 Berdasarkan sumber dari majalah Harvard Business Review, mempertahankan loyalitas pelanggan akan dapat meningkatkan total pendapatan perusahaan sebesar 25%-40%. Peran retensi pelanggan juga sangat signifikan dalam mengurangi anggaran bisnis perusahaan. Untuk mendapatkan pelanggan baru diperlukan biaya 5 hingga 25 kali lebih mahal dibandingkan mempertahankan pelanggan yang sudah ada.
 
-Dalam konteks ini kami sebagai seorang Data Scientist akan menganalisis data transaksi dari perusahaan Olist, sebuah departement store di Brasil yang beroperasi di segmen e-commerce. Kami akan mencoba memaksimalkan penjualan ritel pada e-commerce olist dengan melakukan customer segmentation yang dapat meningkatkan retensi pelanggan. Retention rate yang tinggi mengartikan bahwa pelanggan tersebut menghargai produk atau layanan yang diberikan perusahaan dan memberikan sumber pendapatan berkelanjutan kepada perusahaan tersebut.
+Retention rate merupakan salah satu alat untuk mengukur tingkat retensi pelanggan yang memproyeksikan keuntungan dan pertumbuhan dari produk atau layanan yang dipasarkan oleh sebuah perusahaan. Retention rate adalah persentase pengguna yang terus menggunakan layanan atau produk dari perusahaan selama jangka waktu tertentu. Menurut Moran Khoubian, Direktur Senior dari Perusahaan Yotpo, yang bergerak di pemasaran konten berbasis cloud untuk bisnis e-commerce, mengatakan bahwa  retention rate untuk setiap e-commerce berbeda-beda tergantung ukuran perusahaan dan cara model perencanaan bisnisnya, tetapi biasanya rata-rata retention rate suatu perusahaan e-commerce berada di antara 15% hingga 30%.
+
+Saat terdapat indikasi bahwa retention rate perusahaan rendah atau dengan kata lain saat bisnis kehilangan pangsa pasar atau pelanggan tidak puas dengan produk atau layanan yang ditawarkan, hal tersebut dapat menyebabkan penurunan transaksi dan berdampak pada pendapatan perusahaan. Untuk mengatasi masalah ini, perusahaan perlu meningkatkan retensi pelanggan dengan cara memahami basis pelanggan melalui segmentasi.
+
+Dengan membagi basis pelanggan menjadi kelompok-kelompok yang lebih kecil dan lebih mudah dikelola berdasarkan karakteristik tertentu, perusahaan dapat menyesuaikan pendekatan terhadap kebutuhan dan keinginan pelanggan untuk setiap segmennya guna mencegah hilangnya pelanggan. Misalnya dengan memberikan penawaran promo yang tepat sasaran untuk meningkatkan kepuasan pelanggan sesuai kebutuhannya, yang diharapkan pelanggan tersebut akan tertarik untuk menerima tawaran tersebut dan kembali membeli produk atau menggunakan layanan dari perusahaan.
+
+Dalam konteks ini kami sebagai seorang Data Scientist akan menganalisis data transaksi dari perusahaan Olist, sebuah e-commerce platform yang mengintegrasikan berbagai marketplace di brazil. 
 
 Problem Statement
 -------------
-1. Bagaimana kondisi customer retention rate Olist?
-2. Bagaimana cara Olist mengembangkan retensi pelanggan sehingga dapat meningkatkan penjualan?
+1. Bagaimana kondisi retensi pelanggan Olist?
+2. Bagaimana cara Olist melakukan segmentasi sehingga dapat membagi pelanggan berdasarkan perilaku pembeliannya?
 3. Bagaimana cara Olist memonitor performa bisnis, retensi dan segmentasi pelanggan sehingga dapat mengambil tindakan lebih cepat dan tepat?
 
 Scope of Problem
@@ -20,6 +26,7 @@ Asumsi saat ini tim marketing Olist melakukan pemasaran secara merata terhadap s
 
 Goals
 -------------
+* Melakukan analisis untuk mengetahui kondisi retensi pelanggan Olist.
 * Melakukan segmentasi pelanggan dan memberikan rekomendasi aksi yang sesuai (khususnya terkait pemasaran) untuk masing-masing segmentasi dengan harapan dapat meningkatkan retensi pelanggan dan mengurangi biaya operasional yang tidak diperlukan.
 * Membuat dashboard visualisasi untuk memonitor performa bisnis, retensi dan segmentasi pelanggan.
 
@@ -35,33 +42,37 @@ Bertanggung jawab dalam mengatur keuangan perusahaan yang diakibatkan oleh usaha
 
 Analytics Approach
 -------------
-1. Diagnostic Analysis
+1. Descriptive Analysis
 > - Retention Rate
-Retention rate merupakan salah satu alat untuk mengukur tingkat retensi pelanggan yang memproyeksikan keuntungan dan pertumbuhan dari produk atau layanan yang dipasarkan oleh sebuah perusahaan. Retention rate adalah persentase pengguna yang terus menggunakan layanan atau produk dari perusahaan selama jangka waktu tertentu. Menurut Moran Khoubian, Direktur Senior dari Perusahaan Yotpo, yang bergerak di pemasaran konten berbasis cloud untuk bisnis e-commerce, mengatakan bahwa  retention rate untuk setiap e-commerce berbeda-beda tergantung ukuran perusahaan dan cara model perencanaan bisnisnya, tetapi biasanya rata-rata retention rate suatu perusahaan e-commerce berada di antara 15% hingga 30%.
-
-Saat terdapat indikasi bahwa retention rate perusahaan rendah atau dengan kata lain saat bisnis kehilangan pangsa pasar atau pelanggan tidak puas dengan produk atau layanan yang ditawarkan, hal tersebut dapat menyebabkan penurunan transaksi dan berdampak pada pendapatan perusahaan. Untuk mengatasi masalah ini, perusahaan perlu meningkatkan retensi pelanggan dengan cara memahami basis pelanggan melalui segmentasi.
 > - Cohort Analysis
 
 2. Segmentation
-Dengan membagi basis pelanggan menjadi kelompok-kelompok yang lebih kecil dan lebih mudah dikelola berdasarkan karakteristik tertentu, perusahaan dapat menyesuaikan pendekatan terhadap kebutuhan dan keinginan pelanggan untuk setiap segmennya guna mencegah hilangnya pelanggan. Misalnya dengan memberikan penawaran promo yang tepat sasaran untuk meningkatkan kepuasan pelanggan sesuai kebutuhannya, yang diharapkan pelanggan tersebut akan tertarik untuk menerima tawaran tersebut dan kembali membeli produk atau menggunakan layanan dari perusahaan.
- 
 > - RFM Analysis
 > - Clustering - Unsupervised Machine Learning
 
+3. Tabelau - Dashboard
+
 Evaluation
 -------------
-* Metrics
+* **Metrics**
   
-  Metrik yang akan digunakan untuk mengevaluasi segmentasi pelanggan dengan model berbasis clustering adalah Silhouette score dan Davies Boudlin Score. Silhouette score merupakan ukuran kemiripan atau seberapa dekat sebuah sample terhadap clusternya sendiri dibandingkan terhadap cluster lainnya. Silhouette score mempunyai rentang nilai dari -1 sampai 1 di mana:
-  * Semakin besar nilai maka semakin dekat sample tersebut dengan clusternya sendiri (atau clustering sudah cukup baik)
+  Metrik yang akan digunakan untuk mengevaluasi segmentasi pelanggan dengan model berbasis clustering adalah Silhouette score dan Davies Boudlin Score.
+
+  Silhouette score merupakan ukuran kemiripan atau seberapa dekat sebuah sample terhadap clusternya sendiri dibandingkan terhadap cluster lainnya. Silhouette score mempunyai rentang nilai dari -1 sampai 1 di mana:
+  * Semakin besar nilai maka semakin dekat sample tersebut dengan clusternya sendiri
   * Semakin kecil nilai maka sample masuk ke cluster yang kurang tepat
   * Nilai 0 berarti cluster tidak dapat dibedakan dengan jelas
   
-  Jumlah cluster yang optimal dapat ditentukan melalui silhouette score yang terbaik. Ketika silhouette score semakin besar, semakin jelas segmentasi terpisah satu sama lain. Dengan begitu, tim marketing dapat mengambil langkah pendekatan yang lebih tepat sasaran untuk masing-masing segmentasi pelanggan.
+  Davies Bouldin score merupakan ukuran kemiripan sebuah cluster terhadap cluster lain.
 
-  Davies Boud
+  Ekspektasi untuk hasil clustering adalah nilai silhouette score sebesar mungkin dan nilai davies bouldin score sekecil mungkin. Ketika silhouette score semakin besar, semakin jelas segmentasi terpisah satu sama lain. Ketika nilai davies bouldin score semakin kecil, kemiripan cluster satu sama lain semakin kecil. Kedua metrik ini digunakan untuk menentukan jumlah cluster yang optimal pada pemodelan machine learning.
 
-* Processing Time
-  Waktu pemrosesan 
+  Dalam konteks bisnis, nilai metrik evaluasi yang lebih baik akan menghasilkan segmentasi yang terpisah lebih jelas sehingga stakeholder terkait dapat mengambil langkah pendekatan yang lebih tepat sasaran untuk masing-masing segmentasi customer.
+
+* **Processing Time**
+
+  Waktu pemrosesan merujuk pada waktu yang dibutuhkan untuk melakukan pemodelan sampai menghasilkan segmentasi. Untuk pemodelan machine learning, hal ini termasuk waktu training dan tuning parameter. Aspek ini dipertimbangkan mengingat jumlah data yang digunakan besar dan berpengaruh terhadap kompleksitas waktu.
   
-* Interpretation
+* **Interpretation**
+
+  Interpretasi di sini difokuskan pada informasi yang dapat diambil dari hasil segmentasi karena tujuan dari analisis ini adalah mendapatkan segmentasi customer yang dapat memberikan actionable insights yang tepat.
