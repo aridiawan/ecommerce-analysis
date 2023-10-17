@@ -46,22 +46,22 @@ Goals
 
 Project Stakeholders
 -------------
-1. Tim Marketing & Sales (Primary Stakeholder)
+1. **Tim Marketing & Sales** (Primary Stakeholder)
 
 Bertanggung jawab dalam mengembangkan dan merencanakan usaha marketing serta mengimplementasikan kepada pelanggan secara tepat dalam upaya memaksimalkan pendapatan perusahaan.
 
-2. Tim Keuangan (Secondary Stakeholder)
+2. **Tim Keuangan** (Secondary Stakeholder)
 
 Bertanggung jawab dalam mengatur keuangan perusahaan yang diakibatkan oleh usaha marketing.
 
 Analytics Approach
 -------------
 1. Descriptive Analysis
-> - Retention Rate - Cohort Analysis
+   * Retention Rate - Cohort Analysis
 
-2. Segmentation
-> - RFM Analysis
-> - Clustering - Unsupervised Machine Learning
+3. Segmentation
+   * RFM Analysis
+   * Clustering - Unsupervised Machine Learning
 
 Evaluation
 -------------
