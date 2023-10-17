@@ -67,7 +67,7 @@ Evaluation
 -------------
 * **Metrics**
   
-  Metrik yang akan digunakan untuk mengevaluasi segmentasi pelanggan dengan model berbasis clustering adalah Silhouette score dan Davies Boudlin Score.
+  Metrik yang akan digunakan untuk mengevaluasi segmentasi pelanggan adalah Silhouette score dan Davies Bouldin Score.
 
   Silhouette score merupakan ukuran kemiripan atau seberapa dekat sebuah sample terhadap clusternya sendiri dibandingkan terhadap cluster lainnya. Silhouette score mempunyai rentang nilai dari -1 sampai 1 di mana:
   * Semakin besar nilai maka semakin dekat sample tersebut dengan clusternya sendiri
@@ -76,7 +76,7 @@ Evaluation
   
   Davies Bouldin score merupakan ukuran kemiripan sebuah cluster terhadap cluster lain.
 
-  Ekspektasi untuk hasil clustering adalah nilai silhouette score sebesar mungkin dan nilai davies bouldin score sekecil mungkin. Ketika silhouette score semakin besar, semakin jelas segmentasi terpisah satu sama lain. Ketika nilai davies bouldin score semakin kecil, kemiripan cluster satu sama lain semakin kecil. Kedua metrik ini digunakan untuk menentukan jumlah cluster yang optimal pada pemodelan machine learning.
+  Ekspektasi untuk hasil clustering adalah nilai silhouette score sebesar mungkin mendekati 1 dan nilai davies bouldin score sekecil mungkin. Ketika silhouette score semakin besar, semakin jelas segmentasi terpisah satu sama lain. Ketika nilai davies bouldin score semakin kecil, kemiripan cluster satu sama lain semakin kecil. Kedua metrik ini digunakan untuk menentukan jumlah cluster yang optimal pada pemodelan machine learning.
 
   Dalam konteks bisnis, nilai metrik evaluasi yang lebih baik akan menghasilkan segmentasi yang terpisah lebih jelas sehingga stakeholder terkait dapat mengambil langkah pendekatan yang lebih tepat sasaran untuk masing-masing segmentasi customer.
 
