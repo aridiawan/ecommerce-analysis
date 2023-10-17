@@ -31,13 +31,13 @@ Goals
 
 Project Stakeholders
 -------------
-1. Tim Marketing & Sales (Primary Stakeholder)
+* **Tim Marketing & Sales** (Primary Stakeholder)
 
-Bertanggung jawab dalam mengembangkan dan merencanakan usaha marketing serta mengimplementasikan kepada pelanggan secara tepat dalam upaya memaksimalkan pendapatan perusahaan.
+  Bertanggung jawab dalam mengembangkan dan merencanakan usaha marketing serta mengimplementasikan kepada pelanggan secara tepat dalam upaya memaksimalkan pendapatan perusahaan.
 
-2. Tim Keuangan (Secondary Stakeholder)
+* **Tim Keuangan** (Secondary Stakeholder)
 
-Bertanggung jawab dalam mengatur keuangan perusahaan yang diakibatkan oleh usaha marketing.
+  Bertanggung jawab dalam mengatur keuangan perusahaan yang diakibatkan oleh usaha marketing.
 
 Analytics Approach
 -------------
@@ -47,18 +47,25 @@ Analytics Approach
 
 Evaluation
 -------------
-* Metrics
+* **Metrics**
   
-  Metrik yang akan digunakan untuk mengevaluasi segmentasi pelanggan dengan model berbasis clustering adalah Silhouette score dan Davies Boudlin Score. Silhouette score merupakan ukuran kemiripan atau seberapa dekat sebuah sample terhadap clusternya sendiri dibandingkan terhadap cluster lainnya. Silhouette score mempunyai rentang nilai dari -1 sampai 1 di mana:
-  * Semakin besar nilai maka semakin dekat sample tersebut dengan clusternya sendiri (atau clustering sudah cukup baik)
+  Metrik yang akan digunakan untuk mengevaluasi segmentasi pelanggan dengan model berbasis clustering adalah Silhouette score dan Davies Boudlin Score.
+
+  Silhouette score merupakan ukuran kemiripan atau seberapa dekat sebuah sample terhadap clusternya sendiri dibandingkan terhadap cluster lainnya. Silhouette score mempunyai rentang nilai dari -1 sampai 1 di mana:
+  * Semakin besar nilai maka semakin dekat sample tersebut dengan clusternya sendiri
   * Semakin kecil nilai maka sample masuk ke cluster yang kurang tepat
   * Nilai 0 berarti cluster tidak dapat dibedakan dengan jelas
   
-  Jumlah cluster yang optimal dapat ditentukan melalui silhouette score yang terbaik. Ketika silhouette score semakin besar, semakin jelas segmentasi terpisah satu sama lain. Dengan begitu, tim marketing dapat mengambil langkah pendekatan yang lebih tepat sasaran untuk masing-masing segmentasi pelanggan.
+  Davies Bouldin score merupakan ukuran kemiripan sebuah cluster terhadap cluster lain.
 
-  Davies Boud
+  Ekspektasi untuk hasil clustering adalah nilai silhouette score sebesar mungkin dan nilai davies bouldin score sekecil mungkin. Ketika silhouette score semakin besar, semakin jelas segmentasi terpisah satu sama lain. Ketika nilai davies bouldin score semakin kecil, kemiripan cluster satu sama lain semakin kecil. Kedua metrik ini digunakan untuk menentukan jumlah cluster yang optimal pada pemodelan machine learning.
 
-* Processing Time
-  Waktu pemrosesan 
+  Dalam konteks bisnis, nilai metrik evaluasi yang lebih baik akan menghasilkan segmentasi yang terpisah lebih jelas sehingga stakeholder terkait dapat mengambil langkah pendekatan yang lebih tepat sasaran untuk masing-masing segmentasi customer.
+
+* **Processing Time**
+
+  Waktu pemrosesan merujuk pada waktu yang dibutuhkan untuk melakukan pemodelan sampai menghasilkan segmentasi. Untuk pemodelan machine learning, hal ini termasuk waktu training dan tuning parameter. Aspek ini dipertimbangkan mengingat jumlah data yang digunakan besar dan berpengaruh terhadap kompleksitas waktu.
   
-* Interpretation
+* **Interpretation**
+
+  Interpretasi di sini difokuskan pada informasi yang dapat diambil dari hasil segmentasi karena tujuan dari analisis ini adalah mendapatkan segmentasi customer yang dapat memberikan actionable insights yang tepat.
