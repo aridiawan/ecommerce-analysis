@@ -14,6 +14,7 @@ Table of Contents
 * [Project Stakeholders](#project-stakeholders)
 * [Analytics Approach](#analytics-approach)
 * [Evaluation](#evaluation)
+* [Dashboard - Tableau](#dashboard-tableau)
 
 Context
 -------------
@@ -86,3 +87,7 @@ Evaluation
 * **Interpretation**
 
   Interpretasi di sini difokuskan pada informasi yang dapat diambil dari hasil segmentasi karena tujuan dari analisis ini adalah mendapatkan segmentasi customer yang dapat memberikan actionable insights yang tepat.
+
+Dashboard - Tableau
+-------------
+[Ecommerce Dashboard - RFM Segmentation](https://github.com/nheryanto](https://public.tableau.com/views/EcommerceDashboard-RFMSegmentation/ECOMMERCE?:language=en-US&:display_count=n&:origin=viz_share_link)https://public.tableau.com/views/EcommerceDashboard-RFMSegmentation/ECOMMERCE?:language=en-US&:display_count=n&:origin=viz_share_link)
