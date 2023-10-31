@@ -1,5 +1,21 @@
 # E-Commerce RFM Analysis
 
+Team Members:
+* [**Nur Adhianti Heryanto**](https://github.com/nheryanto)
+* [**Ari Adhi Hermawan**](https://github.com/aridiawan)
+* [**Andi Muhammad Rinaldi Saputra**](https://github.com/andimrs)
+
+Table of Contents
+-------------
+* [Context](#context)
+* [Problem Statement](#problem-statement)
+* [Scope of Problem](#scope-of-problem)
+* [Goals](#goals)
+* [Project Stakeholders](#project-stakeholders)
+* [Analytics Approach](#analytics-approach)
+* [Evaluation](#evaluation)
+* [Dashboard - Tableau](#dashboard-tableau)
+
 Context
 -------------
 Kemampuan perusahaan dalam menjalin dan menjaga hubungan baik dengan pelanggan merupakan kunci keberhasilan bisnis yang berkelanjutan. Hubungan yang baik membuat pelanggan tetap ingin bertransaksi, atau bahkan mereka akan memberikan rekomendasi produk atau layanan perusahaan kepada orang lain. Dalam konteks bisnis, strategi mempertahankan pelanggan agar terus membeli produk atau menggunakan layanan dari perusahaan disebut dengan retensi pelanggan. Hal ini bertujuan untuk meningkatkan profit perusahaan.
@@ -12,13 +28,12 @@ Saat terdapat indikasi bahwa retention rate perusahaan rendah atau dengan kata l
 
 Dengan membagi basis pelanggan menjadi kelompok-kelompok yang lebih kecil dan lebih mudah dikelola berdasarkan karakteristik tertentu, perusahaan dapat menyesuaikan pendekatan terhadap kebutuhan dan keinginan pelanggan untuk setiap segmennya guna mencegah hilangnya pelanggan. Misalnya dengan memberikan penawaran promo yang tepat sasaran untuk meningkatkan kepuasan pelanggan sesuai kebutuhannya, yang diharapkan pelanggan tersebut akan tertarik untuk menerima tawaran tersebut dan kembali membeli produk atau menggunakan layanan dari perusahaan.
 
-Dalam konteks ini kami sebagai seorang Data Scientist akan menganalisis data transaksi dari perusahaan Olist, sebuah departement store di Brasil yang beroperasi di segmen e-commerce. Kami akan mencoba memaksimalkan penjualan ritel pada e-commerce olist dengan melakukan customer segmentation yang dapat meningkatkan retensi pelanggan. Retention rate yang tinggi mengartikan bahwa pelanggan tersebut menghargai produk atau layanan yang diberikan perusahaan dan memberikan sumber pendapatan berkelanjutan kepada perusahaan tersebut.
+Dalam konteks ini kami sebagai seorang Data Scientist akan menganalisis data transaksi dari perusahaan Olist, sebuah e-commerce platform yang mengintegrasikan berbagai marketplace di brazil. 
 
 Problem Statement
 -------------
-1. Bagaimana kondisi customer retention rate Olist?
-2. Bagaimana cara Olist mengembangkan retensi pelanggan sehingga dapat meningkatkan penjualan?
-3. Bagaimana cara Olist memonitor performa bisnis, retensi dan segmentasi pelanggan sehingga dapat mengambil tindakan lebih cepat dan tepat?
+1. Bagaimana kondisi retensi pelanggan Olist?
+2. Bagaimana cara Olist melakukan segmentasi sehingga dapat membagi pelanggan berdasarkan perilaku pembeliannya?
 
 Scope of Problem
 -------------
@@ -26,30 +41,33 @@ Asumsi saat ini tim marketing Olist melakukan pemasaran secara merata terhadap s
 
 Goals
 -------------
+* Melakukan analisis untuk mengetahui kondisi retensi pelanggan Olist.
 * Melakukan segmentasi pelanggan dan memberikan rekomendasi aksi yang sesuai (khususnya terkait pemasaran) untuk masing-masing segmentasi dengan harapan dapat meningkatkan retensi pelanggan dan mengurangi biaya operasional yang tidak diperlukan.
-* Membuat dashboard visualisasi untuk memonitor performa bisnis, retensi dan segmentasi pelanggan.
 
 Project Stakeholders
 -------------
-* **Tim Marketing & Sales** (Primary Stakeholder)
+1. **Tim Marketing & Sales** (Primary Stakeholder)
 
-  Bertanggung jawab dalam mengembangkan dan merencanakan usaha marketing serta mengimplementasikan kepada pelanggan secara tepat dalam upaya memaksimalkan pendapatan perusahaan.
+Bertanggung jawab dalam mengembangkan dan merencanakan usaha marketing serta mengimplementasikan kepada pelanggan secara tepat dalam upaya memaksimalkan pendapatan perusahaan.
 
-* **Tim Keuangan** (Secondary Stakeholder)
+2. **Tim Keuangan** (Secondary Stakeholder)
 
-  Bertanggung jawab dalam mengatur keuangan perusahaan yang diakibatkan oleh usaha marketing.
+Bertanggung jawab dalam mengatur keuangan perusahaan yang diakibatkan oleh usaha marketing.
 
 Analytics Approach
 -------------
-1. Cohort Analysis
-2. Segmentation with Machine Learning
-3. Segmentation with RFM Analysis
+1. Descriptive Analysis
+   * Retention Rate - Cohort Analysis
+
+3. Segmentation
+   * RFM Analysis
+   * Clustering - Unsupervised Machine Learning
 
 Evaluation
 -------------
 * **Metrics**
   
-  Metrik yang akan digunakan untuk mengevaluasi segmentasi pelanggan dengan model berbasis clustering adalah Silhouette score dan Davies Boudlin Score.
+  Metrik yang akan digunakan untuk mengevaluasi segmentasi pelanggan adalah Silhouette score dan Davies Bouldin Score.
 
   Silhouette score merupakan ukuran kemiripan atau seberapa dekat sebuah sample terhadap clusternya sendiri dibandingkan terhadap cluster lainnya. Silhouette score mempunyai rentang nilai dari -1 sampai 1 di mana:
   * Semakin besar nilai maka semakin dekat sample tersebut dengan clusternya sendiri
@@ -58,7 +76,7 @@ Evaluation
   
   Davies Bouldin score merupakan ukuran kemiripan sebuah cluster terhadap cluster lain.
 
-  Ekspektasi untuk hasil clustering adalah nilai silhouette score sebesar mungkin dan nilai davies bouldin score sekecil mungkin. Ketika silhouette score semakin besar, semakin jelas segmentasi terpisah satu sama lain. Ketika nilai davies bouldin score semakin kecil, kemiripan cluster satu sama lain semakin kecil. Kedua metrik ini digunakan untuk menentukan jumlah cluster yang optimal pada pemodelan machine learning.
+  Ekspektasi untuk hasil clustering adalah nilai silhouette score sebesar mungkin mendekati 1 dan nilai davies bouldin score sekecil mungkin. Ketika silhouette score semakin besar, semakin jelas segmentasi terpisah satu sama lain. Ketika nilai davies bouldin score semakin kecil, kemiripan cluster satu sama lain semakin kecil. Kedua metrik ini digunakan untuk menentukan jumlah cluster yang optimal pada pemodelan machine learning.
 
   Dalam konteks bisnis, nilai metrik evaluasi yang lebih baik akan menghasilkan segmentasi yang terpisah lebih jelas sehingga stakeholder terkait dapat mengambil langkah pendekatan yang lebih tepat sasaran untuk masing-masing segmentasi customer.
 
@@ -69,3 +87,25 @@ Evaluation
 * **Interpretation**
 
   Interpretasi di sini difokuskan pada informasi yang dapat diambil dari hasil segmentasi karena tujuan dari analisis ini adalah mendapatkan segmentasi customer yang dapat memberikan actionable insights yang tepat.
+
+Dashboard - Tableau
+-------------
+[Ecommerce Dashboard - RFM Segmentation](https://public.tableau.com/views/EcommerceDashboard-RFMSegmentation/ECOMMERCE?:language=en-US&:display_count=n&:origin=viz_share_link)
+
+Project Organization
+------------
+
+    ├── README.md          <- business understanding
+    ├── data
+    │   ├── additional     <- rfm guide (segment, activity, actionable)
+    │   ├── model          <- benchmark & tuning metrics, rfm segmentation result
+    |   ├── processed      <- final data for analysis & modeling
+    │   └── raw            <- original data
+    │
+    ├── img                <- images, e.g. logo
+    │                         
+    ├── notebooks          <- Jupyter notebooks with naming convention: a number (for ordering)
+    │                         and a short `-` delimited description, e.g. `1-data-preparation`
+    │
+    └── requirements.txt   <- requirements file for reproducing the analysis environment, e.g.
+                              generated with `pip freeze > requirements.txt`
